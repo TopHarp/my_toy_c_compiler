@@ -38,7 +38,7 @@ int ParseMainLoop()
 {
     CSourceCodeBuf source_code;
     // if (RETURN_SUCCESS != source_code.ReadSourceFile("/home/sda/gyxu_workspace/tmp_p/toy_comp/toy-comp/toy_compiler/test/test_nowchar.cpp"))
-    if (RETURN_SUCCESS != source_code.ReadSourceFile("/root/tools/gyxu_code/my-toy-comp/toy_compiler/test/test_nowchar.cpp"))
+    if (RETURN_SUCCESS != source_code.ReadSourceFile("D:\\F\\github\\my_toy_c_compiler\\test\\test_nowchar.cpp"))
     {
         return 0;
     }

@@ -63,13 +63,20 @@
         "bit": "cpp"
     },
     // "cmake.generator": "MinGW Makefiles",
+    // "cmake.preferredGenerators": ["MinGW Makefiles"]
+    "cmake.cmakePath": "C:/msys64/ucrt64/bin/cmake.exe",
     "cmake.generator": "Ninja",
+    "cmake.preferredGenerators": ["Ninja"],
     "cmake.configureSettings": {
         "CMAKE_C_COMPILER": "C:/msys64/ucrt64/bin/gcc.exe",
         "CMAKE_CXX_COMPILER": "C:/msys64/ucrt64/bin/g++.exe"
     },
-    // "cmake.cmakePath": "C:/msys64/usr/bin/cmake.exe",
-    // "cmake.preferredGenerators": ["MinGW Makefiles"]
-    "cmake.cmakePath": "C:/msys64/ucrt64/bin/cmake.exe",
-    "cmake.preferredGenerators": ["Ninja"]
+    /* 2. 调试器路径 */
+    "miDebuggerPath": "C:/msys64/ucrt64/bin/gdb.exe",
+    /* 3. 终端自动追加 ucrt64/bin 到 PATH */
+    "terminal.integrated.env.windows": {
+        "PATH": "C:\\msys64\\ucrt64\\bin;${env:PATH}"
+    },
+    /* 4. 避免误用 /usr/bin 下的旧工具 */
+    "cmake.configureOnOpen": false
 }

@@ -38,10 +38,11 @@ int CSourceCodeBuf::ReadSourceFile(const char *pathname)
 {
     if (nullptr == pathname)
     {
+        Debug_Error("pathname is null. return\n");
         return RETURN_FAIL;
     }
 
-    int rtn = p_file_opt_->OpenFileOrCreate(pathname, "r");
+    int rtn = p_file_opt_->OpenFileOrCreate(pathname, "rb");
     if (rtn != RETURN_SUCCESS)
     {
         Debug_Error("OPEN FILE FAIL. return: %d\n", rtn);
