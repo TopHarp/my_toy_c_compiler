@@ -61,5 +61,15 @@
         "typeinfo": "cpp",
         "variant": "cpp",
         "bit": "cpp"
-    }
+    },
+    // "cmake.generator": "MinGW Makefiles",
+    "cmake.generator": "Ninja",
+    "cmake.configureSettings": {
+        "CMAKE_C_COMPILER": "C:/msys64/ucrt64/bin/gcc.exe",
+        "CMAKE_CXX_COMPILER": "C:/msys64/ucrt64/bin/g++.exe"
+    },
+    // "cmake.cmakePath": "C:/msys64/usr/bin/cmake.exe",
+    // "cmake.preferredGenerators": ["MinGW Makefiles"]
+    "cmake.cmakePath": "C:/msys64/ucrt64/bin/cmake.exe",
+    "cmake.preferredGenerators": ["Ninja"]
 }

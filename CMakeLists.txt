@@ -4,7 +4,7 @@ project(toy_compiler)
 set(LIBRARY_OUTPUT_PATH ${CMAKE_SOURCE_DIR})
 set(EXECUTABLE_OUTPUT_PATH ${CMAKE_SOURCE_DIR})
 
-add_compile_options(-fPIC -g -std=c++14 -O0 -w)     # -Wall
+add_compile_options(-fPIC -g -std=c++14 -O0 -fpermissive -w)     # -Wall
 
 
 list(APPEND IncludePath 

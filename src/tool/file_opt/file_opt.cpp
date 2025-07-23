@@ -199,9 +199,10 @@ size_t CFileOpt::WriteFile(char *data, const int &size, const int &writeCount)
 	return numWritten;
 }
 
+#include <direct.h>     // _mkdir 在 MSVC
 int CFileOpt::MakeDir(const char *pathName)
 {
-	// int mkRet = _mkdir(pathName);		// 未确认 是否为Linux  window下 _mkdir 头文件为dircet.h
+	int mkRet = _mkdir(pathName);		// 未确认 是否为Linux  window下 _mkdir 头文件为dircet.h
 	// int mkRet = CreateDirectory(pathName, NULL);
 	/*    
 	S_ISUID 04000 文件的执行时设置用户ID（set user-id on execution）位
@@ -224,7 +225,7 @@ int CFileOpt::MakeDir(const char *pathName)
 	S_IXOTH 00001 其他用户具可执行权限
 
     */
-	int mkRet = mkdir(pathName, S_IRWXU|S_IRWXG|S_IRWXO);
+	// int mkRet = mkdir(pathName, S_IRWXU|S_IRWXG|S_IRWXO);
 	Debug_Error("mkret = %d\n",mkRet);
 	if (mkRet < 0)
 	{
