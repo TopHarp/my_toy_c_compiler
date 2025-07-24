@@ -74,9 +74,22 @@ int ParseMainLoop()
     return 0;
 }
 
+#include <cpuid.h>
 
 int main()
 {
+
+    {
+        unsigned int eax, ebx, ecx, edx;
+        __get_cpuid(1, &eax, &ebx, &ecx, &edx);
+        if (!(ecx & bit_AVX)) {
+            printf("AVX not supported!\n");
+            // return 1;
+        }
+        // 安全使用 AVX 的代码
+        // return 0;
+    }
+
     Debug_Error("hello \n");
 
     ParseMainLoop();

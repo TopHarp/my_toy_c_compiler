@@ -3,9 +3,9 @@ project(toy_compiler)
 
 set(LIBRARY_OUTPUT_PATH ${CMAKE_SOURCE_DIR})
 set(EXECUTABLE_OUTPUT_PATH ${CMAKE_SOURCE_DIR})
-set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -march=x86-64 -mtune=generic")
-set(CMAKE_C_FLAGS   "${CMAKE_C_FLAGS}   -march=x86-64 -mtune=generic")
-add_compile_options(-fPIC -g -std=c++14 -march=native -mtune=native -mno-avx2 -O0 -fpermissive -w)     # -Wall
+# set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -march=x86-64 -mtune=generic")
+# set(CMAKE_C_FLAGS   "${CMAKE_C_FLAGS}   -march=x86-64 -mtune=generic")
+add_compile_options(-march=native -mtune=native -mno-avx2 -mno-avx -march=nehalem -fPIC -g -std=c++14 -O0 -fpermissive -w)     # -Wall
 
 
 list(APPEND IncludePath 
